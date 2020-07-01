@@ -1,0 +1,140 @@
+* {
+    box-sizing: border-box;
+  }
+  
+  html {
+    height: 100%;
+  }
+  
+  body {
+    height: 100%;
+    min-height: 100vh;
+    background: url('astronomia2.gif');
+    background-repeat: no-repeat;
+    background-size: cover;
+    overflow: hidden;
+    color: whitesmoke;
+  }
+  
+  .kitty {
+    color: slate;
+    text-align: center;
+    display: flex;
+    align-items: center;
+    color: hsl(157, 65%, 80%);
+    height: 100%;
+  }
+  
+  .kitty h1 {
+    text-shadow: 1px 1px 0 hsl(12, 81%, 59%), 2px 2px 0 hsl(12, 81%, 59%), 3px 3px 0 hsl(12, 81%, 59%), 4px 4px 0 hsl(12, 81%, 59%), 5px 5px 0 hsl(12, 81%, 59%), 6px 6px 0 hsl(12, 81%, 59%), 7px 7px 0 hsl(12, 81%, 59%);
+    text-transform: uppercase;
+  }
+  
+  .text-container {
+    width: 100%;
+    height: 100%;
+    text-align: center;
+    position: absolute;
+    top: 0;
+    left: 0;
+  }
+  
+  .half {
+    width: 50%;
+    height: 100%;
+    background: grey;
+    float: left;
+    overflow: hidden;
+    transition: transform 1.5s ease;
+    display: flex;
+    align-items: center;
+  }
+  
+  h1 {
+    margin: 0;
+    font-size: 14vmin;
+    width: 100%;
+    font-family: 'Dosis', sans-serif;
+    font-weight: 600;
+  }
+  
+  .left h1 {
+    transform: translateX(50%);
+  }
+  
+  .right h1 {
+    transform: translateX(-50%);
+    position: relative;
+  }
+  
+  .right h1::after {
+    content: '';
+    position: absolute;
+    width: 2.5vmin;
+    height: 2.5vmin;
+    bottom: 3.8vmin;
+    margin-left: 2px;
+    background: black;
+    border-radius: 50%;
+  }
+  
+  .split-left {
+    background: black;
+    transform: translateX(-50vw);
+  }
+  
+  .split-right {
+    background: black;
+    transform: translateX(50vw);
+  }
+  
+  .btn {
+    position: absolute;
+    display: block;
+    bottom: 8vh;
+    left: 50%;
+    z-index: 2;
+    height: 3rem;
+    width: 3rem;
+    background: transparent;
+    border: 4px solid;
+    color: black;
+    font-size: 2rem;
+    line-height: 1.75rem;
+    border-radius: 50%;
+    transform: translate(-50%, -50%);
+    outline: 0;
+    padding: 0;
+    transition: all 0.3s ease-in-out;
+  }
+  
+  .btn:focus,
+  .btn:hover {
+    background: black;
+    color: white;
+    cursor: pointer;
+  }
+  
+  .scale-down {
+    opacity: 0;
+  }
+  
+  @keyframes scale-up-down {
+    60% {
+      transform: scale(1.3)
+    }
+  }
+  
+  .scream {
+    animation: scale-up-down 1s 3 alternate;
+    animation-delay: 1.5s;
+  }
+  
+  @media only screen and (max-device-width: 800px) and (orientation: landscape) {
+    .btn {
+      bottom: 4vh;
+      height: 2.5rem;
+      width: 2.5rem;
+      font-weight: bold;
+    }
+  }
